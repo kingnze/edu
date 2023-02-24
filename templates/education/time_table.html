@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+Time Table
+{% endblock title %}
+
+{% block content %}
+<div class="inner-banner">
+    <section class="w3l-breadcrumb text-left">
+      <div class="container">
+        <ul class="breadcrumbs-custom-path">
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li class="active"><span class="fa fa-chevron-right mx-2" aria-hidden="true"></span>Time Table</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <section style="margin-top: -6rem !important;"  class="about-section py-5">
+    <div class="container py-md-5 py-4">
+        
+        
+        <div class="row mt-sm-5 mt-4">
+            {% if timetable %}
+            {% for item in timetable %}
+               <div class="col-lg-12 mt-lg-0 mt-4 text-center">
+                    <h3 class="title-style mb-4">{{ item.title}}</h3>
+                    <p>{{item.body | safe}}</p>
+                </div>     
+            {% endfor %}
+             {% endif %}  
+
+        </div>
+        
+    </div>
+</section>
+
+<!-- <div class="container mt-5 mb-5">
+  <div class="row">
+    <div class="col-lg-12">
+      <h3 class="text-center mb-4 mt-5">Frequency Distribution of Subjects</h3>
+      <p class="text-center">Frequency distribution of Subject is as follows; one period each for a subject is 40 minutes duration for all classes from Monday through Thursday while on Friday 1st to 5th period is 35 minutes and 6th to 8th period30 minutes.</p>
+      <hr>
+      <h3 class="text-center mb-4">School Decision Making</h3>
+      <p class="text-center">Decision making within the school takes a democratic dimension as committees are usually set up to consider issues before decision is finally taken. Where necessary an issues are brought up at the staff meeting to be deliberated upon before decisions are taken. However, occasionally the Principal takes decisions without consulting with any committee to address contingencies, but such decisions are usually communicated to concerned parties during staff meetings.</p>
+   
+      <p>
+        The drafting of the school Time-Table is carried by the Time-Table Committee, headed by the Vice Principal (Academic). The committee has the following membership: the Head of Departments, the Counselor, the Year Tutors and any other academic staff as may be determined by the Vice Principal (Academic).
+        <hr>
+        The committee plans the Time-Table to avoid the clashing of classes and achieve relatively even distribution of classes for the subject teachers and aid effective teaching-learning activities.
+        <hr>
+      </p>
+      <p class="mb-2 mt-3">The structure of the school Time-Table reveals the following:</p>
+      <ul>  
+        <li><span class="fa fa-angle-double-right mr-2"></span>English and mathematics (4 periods per week).</li>
+        <li><span class="fa fa-angle-double-right mr-2"></span>Morning assembly starts at 7:30 AM, while the first lesson starts at 8:00 AM.</li>
+        <li><span class="fa fa-angle-double-right mr-2"></span>There is a 40-minute long break between 11:30 – 12:00 PM.</li>
+        <li><span class="fa fa-angle-double-right mr-2"></span>There are 8 periods (40 minutes each) in a day, except for Fridays which is 35 minutes each</li>
+        <li><span class="fa fa-angle-double-right mr-2"></span>Classes end by 2:00 PM except on Fridays when classes end by 1:00 PM.</li>
+        <li><span class="fa fa-angle-double-right mr-2"></span>AnimalSaves</li>
+    </ul>
+      <hr>
+    </div>
+  </div>
+</div> -->
+
+
+{% endblock content %}

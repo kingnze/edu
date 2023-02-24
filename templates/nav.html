@@ -1,0 +1,109 @@
+{% load static %}
+<header id="site-header" class="fixed-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <marquee style="color: var(--heading-color); font-size:medium; font-weight: 200;" behavior="" direction="">OUR MOTTO : Greating Leaders Of Tomorrow </marquee>
+
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark stroke">
+            
+            <a class="navbar-brand" href="{% url 'index' %}">
+                <img style="height: 47px; border-radius: 49px; width: 49px; margin-right: 2rem;" src="{% static 'images/p01lckx1.jpg' %}" alt="Your logo" title="Your logo" style="height:45px; border-radius: 20px;" />
+            </a>
+            <h1 ><a  style="margin-right: 3rem;" class="navbar-brand" href="{% url 'index' %}">
+                School<span class="sub"></span>
+                </a></h1> 
+ 
+            <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+                data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <nav >
+                    <div class="search-bar">
+                    </div>
+                </nav>
+                <ul class="navbar-nav mr-auto">
+                    <li {% if '/' == request.path %}
+                    class="nav-item active"
+                    {% else %}
+                    class="nav-item "
+                    {% endif %}>
+                        
+                        <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a  class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            About Us
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#"></a>
+                            <a style="color: black; font-size: 13px;"  class="dropdown-item" href="{% url 'management' %}">Management</a>
+                            <div class="dropdown-divider"></div>
+                            <a style="color: black; font-size: 13px;"  class="dropdown-item" href="{% url 'staff_members' %}">Staff Members</a>
+                            <div class="dropdown-divider"></div>
+                            <a style="color: black; font-size: 13px;"  class="dropdown-item" href="{% url 'facilities' %}">Facilities </a>
+                            <div class="dropdown-divider"></div>
+                            <a style="color: black; font-size: 13px;"  class="dropdown-item" href="{% url 'gallery' %}">Gallery </a>
+                          
+    
+                        </div>
+                    </li>
+                    <li  class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            Acadamics
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a  class="dropdown-item" href="#"></a>
+                            <a style="color: black; font-size: 13px;" class="dropdown-item" href="{% url 'dressing' %}">Dressing</a>
+                            <div class="dropdown-divider"></div>
+                            <a style="color: black; font-size: 13px;" class="dropdown-item" href="{% url 'tuition_and_payment' %}">Tuition And Payment</a>
+                            <div class="dropdown-divider"></div>
+                            <a style="color: black; font-size: 13px;" class="dropdown-item" href="{% url 'discipline' %}">Discipline </a>
+                            <div  class="dropdown-divider"></div>
+                            <a style="color: black; font-size: 13px;" class="dropdown-item" href="{% url 'time_table' %}">Time Table</a>
+                           
+    
+                        </div>
+                    </li>
+                    <li {% if 'blogs' in request.path %}
+                    class="nav-item active"
+                    {% else %}
+                    class="nav-item "  
+                    {% endif %}>
+                        
+                        <a class="nav-link" href="{% url 'blogs' %}">Blog</a>
+                    </li>
+                    <li {% if 'contact' in request.path %}
+                    class="nav-item active"
+                    {% else %}
+                    class="nav-item "  
+                    {% endif %}>
+                        
+                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mobile-position">
+                <nav class="navigation">
+                    <div class="theme-switch-wrapper">
+                        <label class="theme-switch" for="checkbox">
+                            <input type="checkbox" id="checkbox">
+                            <div class="mode-container py-1">
+                                <i class="gg-sun"></i>
+                                <i class="gg-moon"></i>
+                            </div>
+                        </label>
+                    </div>
+                </nav>
+            </div>
+        </nav>
+    </div>
+</header>

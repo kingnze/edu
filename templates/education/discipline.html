@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+Discipline
+{% endblock title %}
+
+{% block content %}
+<div class="inner-banner">
+    <section class="w3l-breadcrumb text-left">
+      <div class="container">
+        <ul class="breadcrumbs-custom-path">
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li class="active"><span class="fa fa-chevron-right mx-2" aria-hidden="true"></span>Discipline</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <section style="margin-top: -6rem !important;"  class="about-section py-5">
+    <div class="container py-md-5 py-4">
+        
+        
+        <div class="row mt-sm-5 mt-4">
+            {% if discipline %}
+            {% for item in discipline %}
+               <div class="col-lg-12 mt-lg-0 mt-4 text-center">
+                    <h3 class="title-style mb-4">{{ item.title}}</h3>
+                    <p>{{item.body | safe}}</p>
+                </div>     
+            {% endfor %}
+             {% endif %}  
+
+        </div>
+        
+    </div>
+</section>
+
+  <!-- <div class="container mt-5 mb-5">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3 class="text-center mb-2 mt-5">Sanctions for Violation of Regulations</h3>
+        <p class="text-center">The following are some of the disciplinary sanctions which may be imposed for violations of School regulations</p>
+        <hr>
+        <h3 class="text-center mb-2">Fines</h3>
+        <p class="text-center">There must be paid within specific period of time to avoid further stringent actions being imposed. The school may impose fines up to ten thousand naira (N10,000).</p>
+        <hr>
+        <h3 class="text-center mb-2">Suspension</h3>
+        <p class="text-center">Suspension is an action which exclude the student from registration, class attendance, and use of School facilities for a specific period of time. This action means that the student must immediately leave the School premises and shall not return to the school until the suspension period is over.</p>
+        <p>
+          All students must behave in a manner acceptable by the School. They must be well disciplined and well-behaved. The Disciplinary Committee may impose terms which will restrict the student’s participation in various activities in the school.
+          <hr>
+          Discipline is the exhibition of self-control, habit of obedience to what one considers adequate to one self and not what one is told to do. It is an educational process designed to improve and perfect students’ behavior. It is to sharpen the mind to agree to do what is right and leave what is wrong. Only disciplined students obey school rules and regulations.
+          <hr>
+        </p>
+        <p class="mb-2 mt-3">Major disciplinary issues in the school are:</p>
+        <ul>  
+          <li><span class="fa fa-angle-double-right mr-2"></span>Lateness of students to school and classroom.</li>
+          <li><span class="fa fa-angle-double-right mr-2"></span>Absenteeism from school and classes.</li>
+          <li><span class="fa fa-angle-double-right mr-2"></span>Cheating during examination.</li>
+          <li><span class="fa fa-angle-double-right mr-2"></span>Fighting in the school.</li>
+          <li><span class="fa fa-angle-double-right mr-2"></span>Disobedience to prefects and teachers.</li>
+          <li><span class="fa fa-angle-double-right mr-2"></span>Gambling within the school premises.</li>
+          <li><span class="fa fa-angle-double-right mr-2"></span>Smoking and taking of illicit drugs.</li>
+          <li><span class="fa fa-angle-double-right mr-2"></span>Wearing of wrong school uniform.</li>
+      </ul>
+        <hr>
+        <p class="mb-2">Teachers’ Disciplinary issues:</p>
+        <ul>  
+          <li><span class="fa fa-angle-double-right mr-2"></span>Lateness of students to school and classroom.</li>
+          <li><span class="fa fa-angle-double-right mr-2"></span>Absenteeism from school and classes.</li>
+          <li><span class="fa fa-angle-double-right mr-2"></span>Extortion of students financially.</li>
+          <li><span class="fa fa-angle-double-right mr-2"></span>Conducting private lessons during school hours.</li>
+          <li><span class="fa fa-angle-double-right mr-2"></span>Illicit relationship with students.</li>
+      </ul>
+        
+      </div>
+    </div>
+  </div>
+   -->
+
+
+{% endblock content %}

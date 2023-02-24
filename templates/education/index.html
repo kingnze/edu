@@ -1,0 +1,447 @@
+{% extends "base.html" %}
+{% load static %}
+{% load humanize %}
+{% block title %}
+  Home
+{% endblock title %}
+
+{% block content %}
+
+<section class="w3l-main-slider" id="home">
+    <div class="companies20-content">
+        <div class="owl-one owl-carousel owl-theme">
+            <div class="item">
+                <li>
+                    <div class="slider-info banner-view bg bg2">
+                        <div class="banner-info">
+                            <div class="container">
+                                <div class="banner-info-bg">
+                                    <br>
+                                    <h5>A Great Place for Learning</h5>
+                                    <p class="mt-4 pr-lg-4">Choose from over 100,000 online video courses with new
+                                        additions published every month</p>
+                                    <a style="border-color: #fff!important; background-color: #f35b047a!important;" class="btn btn-style btn-primary mt-xl-5 mt-4 mr-2" href="{% url 'contact' %}"> Get
+                                        Started <span class="fa fa-chevron-right ml-2"
+                                            aria-hidden="true"></span></a>
+                                    <a style="border-color: var(--primary-color); background-color: #ffffffa6;" class="btn btn-style btn-white mt-xl-5 mt-4 mr-2" href="{% url 'contact' %}"> Contact Us <span class="fa fa-chevron-right ml-2"aria-hidden="true"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </div>
+            <div class="item">
+                <li>
+                    <div class="slider-info  banner-view banner-top1 bg bg2">
+                        <div class="banner-info">
+                            <div class="container">
+                                <div class="banner-info-bg">
+                                    <br>
+                                    <h5>Learning to Love, Loving to Learn</h5>
+                                    <p class="mt-4 pr-lg-4">Choose from over 100,000 online video courses with new
+                                        additions published every month</p>
+                                    <a style="border-color: #fff!important; background-color: #f35b047a!important;" class="btn btn-style btn-primary mt-xl-5 mt-4 mr-2" href="{% url 'contact' %}"> Get
+                                        Started <span class="fa fa-chevron-right ml-2"
+                                            aria-hidden="true"></span></a>
+                                            <a style="border-color: var(--primary-color); background-color: #ffffffa6;" class="btn btn-style btn-white mt-xl-5 mt-4 mr-2" href="{% url 'contact' %}"> Contact Us <span class="fa fa-chevron-right ml-2"aria-hidden="true"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </div>
+            <div class="item">
+                <li>
+                    <div class="slider-info banner-view banner-top2 bg bg2">
+                        <div class="banner-info">
+                            <div class="container">
+                                <div class="banner-info-bg">
+                                    <br>
+                                    <h5>A Great Place for Learning</h5>
+                                    <p class="mt-4 pr-lg-4">Choose from over 100,000 online video courses with new
+                                        additions published every month </p>
+                                    <a style="border-color: #fff!important; background-color: #f35b047a!important;" class="btn btn-style btn-primary mt-xl-5 mt-4 mr-2" href="{% url 'contact' %}"> Get
+                                        Started <span class="fa fa-chevron-right ml-2"
+                                            aria-hidden="true"></span></a>
+                                            <a style="border-color: var(--primary-color); background-color: #ffffffa6;" class="btn btn-style btn-white mt-xl-5 mt-4 mr-2" href="{% url 'contact' %}"> Contact Us <span class="fa fa-chevron-right ml-2"aria-hidden="true"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </div>
+            <div class="item">
+                <li>
+                    <div class="slider-info banner-view banner-top3 bg bg2">
+                        <div class="banner-info">
+                            <div class="container">
+                                <div class="banner-info-bg">
+                                    <br>
+                                    <h5>Learning to Love, Loving to Learn</h5>
+                                    <p class="mt-4 pr-lg-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Velit
+                                        quisquam, doloremque placeat aut numquam ipsam. </p>
+                                    <a style="border-color: #fff!important; background-color: #f35b047a!important;" class="btn btn-style btn-primary mt-xl-5 mt-4 mr-2" href="{% url 'contact' %}"> Get
+                                        Started <span class="fa fa-chevron-right ml-2"
+                                            aria-hidden="true"></span></a>
+                                            <a style="border-color: var(--primary-color); background-color: #ffffffa6;" class="btn btn-style btn-white mt-xl-5 mt-4 mr-2" href="{% url 'contact' %}"> Contact Us <span class="fa fa-chevron-right ml-2"aria-hidden="true"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </div>
+        </div>
+        <div class="w3l-banner-grids">  
+            <div class="bangrids-inn">
+                <div class="banhny-grid-1">
+                    <div class="banhny-grid-icon">
+                        <span class="fa fa-laptop"></span>
+                    </div>
+                    <div  class="banhny-grid-right-info">
+                        <h6 style="font-size: 24px; font-weight: 600; color: #fff; text-transform: capitalize;">Our courses</a></h6>
+                        <p>Focus is having the unwavering attention.</p>
+                    </div>
+                </div>
+                <div class="banhny-grid-1">
+                    <div class="banhny-grid-icon">
+
+                        <span class="fa fa-users"></span>
+
+                    </div>
+                    <div class="banhny-grid-right-info">
+                        <h6 style="font-size: 24px; font-weight: 600; color: #fff; text-transform: capitalize;">Lifetime entrance</h6>
+                        <p>The best way is to develop and follow.</p>
+                    </div>
+                </div>
+                <div class="banhny-grid-1">
+                    <div class="banhny-grid-icon">
+                        <span class="fa fa-book"></span>
+                    </div>
+                    <div class="banhny-grid-right-info">
+                        <h6 style="font-size: 24px; font-weight: 600; color: #fff; text-transform: capitalize;">Live learning</h6>
+                        <p>Start with your goals in mind and then work.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section>
+    <div class="content-1 py-5">
+    <div class="container py-md-5">
+        <div class="row content-1-grids">
+            <div class="col-lg-4 content-1-left forms-25-info">
+                <div class="header-title">
+                    <span class="sub-title">About Us</span>
+                    <h3 class="hny-title">Learn More About Our Schooll</h3>
+                    
+                </div>
+            </div>
+            <div class="col-lg-4 content-1-right pl-lg-5 mt-lg-0 mt-4">
+                <p class="">Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
+                    ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor sit amet
+                    elit. Non quae, fugiat nihil ad. Lorem ipsum dolor sit amet. Lorem ipsum init
+                    dolor sit, amet elit. Dolor ipsum non velit.
+                </p>
+            </div>
+            <div class="col-lg-4 content-1-right pl-lg-5 mt-lg-0 mt-4">
+                <p class="">Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
+                    ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor sit amet
+                    elit. Non quae, fugiat nihil ad. Lorem ipsum dolor sit amet. Lorem ipsum init
+                    dolor sit, amet elit. Dolor ipsum non velit.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<section class="w3l-content-6">
+    <!-- /content-6-main-->
+    <div class="content-6-mian py-5">
+        <div class="container py-lg-5">
+            <div class="content-info-in row">
+                    {% if history %}
+                    {% for item in history %}
+                        <div class="col-lg-6 w3l-videohny id="video">
+                            <div  class="history-info position-relative">
+                                <!--//video-->
+                                <a href="#small-dialog" class="popup-with-zoom-anim play-view text-center pl-3">
+                                    <span class="video-play-icon">
+                                        <span class="fa fa-play"></span>
+                                    </span>
+                                </a>
+
+                                <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+                                <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RBf3rf0diHE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                                </div>
+                                <!--//video-->
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mt-lg-0 mt-5 about-right-faq align-self  pl-lg-4">
+                            <div class="title-content text-left mb-2">
+                                <h6 class="sub-title">Our History</h6>
+                                <h3 class="hny-title">{{ item.title }}</h3>
+                            </div>
+                            <p class="mt-3">{{ item.body | truncatechars:500 | safe }}</p>
+                            <a href="{% url 'history' item.slug %}" class="btn btn-style btn-primary mt-4">Read More</a>
+                        </div>
+                
+                        {% endfor %}              
+                        {% endif %}
+
+            </div>
+        </div>
+</section>
+<div class="w3-services py-5">
+    <div class="container py-lg-4">
+        <div class="title-content text-left mb-lg-5 mb-4">
+            <h6 class="sub-title">Top Courses</h6>
+            <h3 class="hny-title">Browse Our Top Courses</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit hic odio.</p>
+            
+        </div>
+        <div  class="row w3-services-grids">
+            {% if ourservice %}
+            {% for item in ourservice %}
+            <div  class="col-lg-4 col-md-6 causes-grid">
+                <div style="border-top: 4px solid #f35b04;"  class=" causes-grid-info">
+                    <a href="{% url 'ourservices' item.slug %}"><img  src="{{item.leadimg.url}}" class="img-fuild" alt=""></a>
+                    <a href="{% url 'ourservices' item.slug %}" class="cause-title-wrap">
+                        <h4 style="color: var(--heading-color);"  class="cause-title text-center">{{ item.title }}<h4>
+                    </a>
+                    <!-- <p class="card-text text-center mb-0"> {{ item.body | truncatechars:150 | safe }}</p> -->
+                    <div style=" padding: 20px;" class="barWrapper">
+                        <div class="progress-box">
+                            <div class="progress" data-value="60">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                                </div>
+                            </div>
+                        </div>
+                        <a href="{% url 'ourservices' item.slug %}" class="btn btn-style btn-primary mt-4">Read More</a>
+                    </div>
+                    
+                </div>
+            </div>
+            {% endfor %}              
+            {% endif %}
+        </div>
+    </div>
+</div>
+<div class="middle py-5">
+    <div class="container pt-lg-2 pb-lg-4 py-4">
+       <div class="row">
+           <div class="col-md-12">
+            <div class="welcome-left text-center py-lg-4">
+                <h3 class="hny-title">Educating Champions of a Just and Sustainable World.</h3>
+                <div class="middle-buttons pb-5">
+                    <a href="{% url 'contact' %}" class="btn btn-style btn-white mt-sm-5 mt-4 mr-2">Read More <span
+                            class="fa fa-chevron-right ml-2" aria-hidden="true"></span></a>
+                    <a href="{% url 'contact' %}" class="btn btn-style btn-primary mt-sm-5 mt-4">Contact Us <span
+                            class="fa fa-chevron-right ml-2" aria-hidden="true"></span></a>
+                </div>
+            </div>
+           </div>
+       </div>
+    </div>
+</div>
+<section class="w3_stats py-lg-0 py-5" id="stats">
+    <div class="container">
+        <div class="w3-stats">
+            <div class="row">
+                {% if stats %}
+                {% for item in stats %}
+                <div class="col-md-3 col-6 mt-md-0 mt-5">
+                    <div style="border-top: 4px solid #f35b04;" class="counter">
+                        <span class="fa fa-users"></span>
+                        <div class="timer count-title count-number mt-3" data-to="15001" data-speed="1500">{{ item.countnumber }}</div>
+                        <p class="count-text">{{ item.counttext }}</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mt-md-0 mt-5">
+                    <div style="border-top: 4px solid #f35b04;" class="counter">
+                        <span class="fa fa-users"></span>
+                        <div class="timer count-title count-number mt-3" data-to="1110" data-speed="1500"></div>
+                        <p class="count-text ">{{ item.counttext1 }}</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mt-md-0 mt-5">
+                    <div style="border-top: 4px solid #f35b04;" class="counter">
+                        <span class="fa fa-smile-o"></span>
+                        <div class="timer count-title count-number mt-3" data-to="250" data-speed="1500"></div>
+                        <p class="count-text">{{ item.counttext2 }}</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mt-md-0 mt-5">
+                    <div style="border-top: 4px solid #f35b04;" class="counter">
+                        <span class="fa fa-users"></span>
+                        <div class="timer count-title count-number mt-3" data-to="332" data-speed="1500"></div>
+                        <p class="count-text">{{ item.counttext3 }}</p>
+                    </div>
+                </div>
+                {% endfor %}              
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+<section class="bloghny-gds py-5">
+    <div class="container py-lg-4">
+        <div class="title-content text-left mb-lg-5 mb-4">
+        <h6 class="sub-title">Top Gallery</h6>
+        <h3 class="hny-title">Browse Our Top Gallery</h3>
+        </div>
+        <div class="row text-left img-grids">
+            {% if gallery %}
+            {% for item in gallery %}
+           <div class="col-lg-4 col-sm-6 maghny-gd-1">
+            <ul class="portfolio-area clearfix p-0 m-0">
+                <li class="portfolio-item2 content" data-id="id-1" data-type="cat-item-1">
+                    <span class="image-block">
+
+                        <a class="image-zoom" href="{{item.leadimg.url}}" data-gal="prettyPhoto[gallery]">
+                            <div class="content-overlay"></div>
+                            <img src="{{item.leadimg.url}}" class="img-fluid w3layouts agileits" alt="portfolio-img">
+                            <div class="content-details fadeIn-bottom">
+                                <h3 class="content-title">{{ item.title}}</h3>
+
+                            </div>
+                        </a>
+                    </span>
+                </li>
+            </ul>
+        </div>
+        {% endfor %}              
+        {% endif %}
+    </div>
+    </div>
+</section>
+<section class="w3l-videohny" id="video">
+        <div class="new-block py-5">
+           <div class="container py-lg-5">
+                   <div class="history-info position-relative">
+                        <!--//video-->
+                        <a href="#small-dialog" class="popup-with-zoom-anim play-view text-center pl-3">
+                            <span class="video-play-icon">
+                                <span class="fa fa-play"></span>
+                            </span>
+                        </a>
+
+                        <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+                        <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/lUq1IisWEKo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <!--//video-->
+                    </div>
+
+                    <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+                 <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/lUq1IisWEKo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                 </div>
+            </div>
+    </div>
+</section>
+<section class="w3l-blogpost-content py-0">
+    <div class="container py-md-5">
+        <div class="header-title mb-5 mt-4">
+            <span class="sub-title">Latest Posts</span>
+            <h3 class="hny-title text-left">Our Blog Posts</h3>
+        </div>
+        <div class="row">
+            {% if blog %}
+            {% for item in blog %}
+              <div class="col-lg-4 col-md-6 item">
+                <div style="border-top: 4px solid #f35b04;"  class="card">
+                    <div class="card-header p-0 position-relative">
+                        <a href="{% url 'blog' item.slug %}">
+                            <img class="card-img-bottom d-block " src="{{item.leadimg.url}}" alt="Card image cap">
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <a href="{% url 'blog' item.slug %}" class="blog-desc">{{ item.title }}</a>
+                        <p>{{ item.author }}</p>
+                        <span class="fa fa-clock-o"></span> {{ item.date_posted }}</span><span class="meta-value"> </span><span class="meta-value ml-2"></span>
+                    </div>
+                </div>
+                <br>
+            </div>
+            {% endfor %}              
+            {% endif %}
+            
+            <!-- <div class="col-lg-4 col-md-6 mt-md-0 mt-4">
+                <div style="border-top: 4px solid #f35b04;"  class="card">
+                    <div class="card-header p-0 position-relative">
+                        <a href="blog-single.html">
+                            <img class="card-img-bottom d-block " src="{% static 'images/slide-5.jpg' %}" alt="Card image cap">
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <a href="blog-single.html" class="blog-desc">Learning to Write as a Professional Author
+                        </a>
+                        <p>Isabella ava</p>
+                        <span class="fa fa-clock-o"></span> 1 min</span><span class="meta-value"> Sep 13, 2020 </span><span class="meta-value ml-2"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mt-md-0 mt-4">
+                <div style="border-top: 4px solid #f35b04;"  class="card">
+                    <div class="card-header p-0 position-relative">
+                        <a href="blog-single.html">
+                            <img class="card-img-bottom d-block " src="{% static 'images/slide-4.jpg' %}" alt="Card image cap">
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <a href="blog-single.html" class="blog-desc">Learning to Write as a Professional Author
+                        </a>
+                        <p>Isabella ava</p>
+                        <span class="fa fa-clock-o"></span> 1 min</span><span class="meta-value"> Sep 13, 2020 </span><span class="meta-value ml-2"></span>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</section>
+<section class="w3l-clients-1" id="testimonials">
+    <!-- /grids -->
+    <div class="cusrtomer-layout py-0">
+        <div class="container py-lg-5 md-0">
+            <div style="text-align: center;" class="header-title mb-md-5 mb-4">
+                <span class="sub-title">Testimonials</span>
+                <h3 class="hny-title text-center">What People Say</h3>
+            </div>
+            <!-- /grids -->
+            <div class="testimonial-row">
+                <div id="owl-demo1" class="owl-one owl-carousel owl-theme mb-3 mb-sm-5 mb-4">
+                    {% if testimonial %}
+                    {% for item in testimonial %}
+                    <div  class="item">
+                        <div  class="testimonial-content">
+                            <div style="border-top: 4px solid #f35b04;" class="testimonial">
+                                <blockquote>
+                                    <q>{{ item.body}}</q>
+                                </blockquote>
+                                <div class="testi-des">
+                                    <div class="test-img">
+                                        <img src="{{item.leadimg.url}}" class="img-fluid " alt="client-img">
+                                    </div>
+                                    <div class="peopl align-self">
+                                        <h4>{{ item.name}}</h4>
+                                        <p class="indentity">{{ item.indentity}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    {% endfor %}              
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <br><br>
+    </div>
+   
+</section>
+
+{% endblock content %}

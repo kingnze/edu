@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+Gallery
+{% endblock title %}
+
+{% block content %}
+<div class="inner-banner">
+  <section class="w3l-breadcrumb text-left">
+    <div class="container">
+      <ul class="breadcrumbs-custom-path">
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li class="active"><span class="fa fa-chevron-right mx-2" aria-hidden="true"></span>Our Gallery</li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+
+
+<section class="bloghny-gds py-5">
+  <div class="container py-lg-4">
+    <div class="title-content text-left mb-lg-5 mb-4">
+      <h6 class="sub-title">Top Gallery</h6>
+      <h3 class="hny-title">Browse Our Gallery</h3>
+    </div>
+    <div class="row text-left img-grids">
+      {% if gallery %}
+      {% for item in gallery %}
+     <div class="col-lg-3 col-sm-6 maghny-gd-1">
+      <ul class="portfolio-area clearfix p-0 m-0">
+        <li class="portfolio-item2 content" data-id="id-1" data-type="cat-item-1">
+            <span class="image-block">
+
+                <a class="image-zoom" href="{{item.leadimg.url}}" data-gal="prettyPhoto[gallery]">
+                    <div class="content-overlay"></div>
+                    <img src="{{item.leadimg.url}}" class="img-fluid w3layouts agileits" alt="portfolio-img">
+                    <div class="content-details fadeIn-bottom">
+                        <h3 class="content-title">{{ item.title}}</h3>
+
+                    </div>
+                </a>
+            </span>
+        </li>
+    </ul>
+          <!-- <div class="maghny-grid">
+          <figure class="effect-lily">
+              <img class="img-fluid" src="{{item.leadimg.url}}" alt="">
+              <figcaption>
+              <div>
+                  <h4>{{ item.title }}</h4>
+              </div>
+              </figcaption>
+          </figure>
+          </div> -->
+  </div>
+  {% endfor %}              
+  {% endif %}
+    </div>
+    <div class="row">
+      <div class="col-md-12 mt-5 mb-5">
+        {% if gallery.has_other_pages %}
+          <ul class="pagination">
+            {% if gallery.has_previous %}
+                <li class="page-item">
+                  <a href="?page={{gallery.previous_page_number}}" class="page-link">&laquo;
+                  </a>
+                </li>
+                {% else %}
+                <!-- <li class="page-link disabled">
+                  <a class="page-link">&laquo;</a>
+                </li> -->
+            {% endif %}
+            {% for i in gallery.paginator.page_range %}
+              {% if gallery.number == i %}
+                <li class="page-item active">
+                  <a class="page-link">{{i}}</a>
+                </li>
+             {% else %}
+             <li class="page-item">
+               <a href="?page={{i}}" class="page-link">{{i}}</a>
+             </li>
+           {% endif %}
+          {% endfor %} 
+          {% if gallery.has_next %}
+              <li class="page-item">
+                <a href="?page={{gallery.next_page_number}}" class="page-link">&raquo;
+                </a>
+              </li>
+            {% else %}
+              <!-- <li class="page-link disabled">
+                <a class="page-link">&raquo;</a>
+              </li> -->
+          {% endif %}
+        </ul>                   
+          {% endif %}
+      </div>
+  </div> 
+  </div>
+  </div>
+</section>
+
+{% endblock content %}

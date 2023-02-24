@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+Blog
+{% endblock title %}
+
+{% block content %}
+<div class="inner-banner">
+    <section class="w3l-breadcrumb text-left">
+      <div class="container">
+        <ul class="breadcrumbs-custom-path">
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li class="active"><span class="fa fa-chevron-right mx-2" aria-hidden="true"></span>Blog</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <section class="w3l-blogpost-content py-0">
+    <div class="container py-md-5">
+      <br>
+        <div class="header-title mb-5 mt-4">
+            <span class="sub-title">Latest Posts</span>
+            <h3 class="hny-title text-left">Our Blog Posts</h3>
+        </div>
+        <div class="row">
+            {% if blog %}
+            {% for item in blog %}
+              <div class="col-lg-4 col-md-6 item">
+                <div style="border-top: 4px solid #f35b04;"  class="card">
+                    <div class="card-header p-0 position-relative">
+                        <a href="{% url 'blog' item.slug %}">
+                            <img class="card-img-bottom d-block " src="{{item.leadimg.url}}" alt="Card image cap">
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <a href="{% url 'blog' item.slug %}" class="blog-desc">{{ item.title }}</a>
+                        <p>{{ item.author }}</p>
+                        <span class="fa fa-clock-o"></span> {{ item.date_posted }}</span><span class="meta-value"> </span><span class="meta-value ml-2"></span>
+                    </div>
+                </div>
+                <br>
+            </div>
+            {% endfor %}              
+            {% endif %}
+        </div>
+        <div class="row">
+          <div class="col-md-12 mt-5 mb-5">
+            {% if blog.has_other_pages %}
+              <ul class="pagination">
+                {% if blog.has_previous %}
+                    <li class="page-item">
+                      <a href="?page={{blog.previous_page_number}}" class="page-link">&laquo;
+                      </a>
+                    </li>
+                    {% else %}
+                    <!-- <li class="page-link disabled">
+                      <a class="page-link">&laquo;</a>
+                    </li> -->
+                {% endif %}
+                {% for i in blog.paginator.page_range %}
+                  {% if blog.number == i %}
+                    <li class="page-item active">
+                      <a class="page-link">{{i}}</a>
+                    </li>
+                 {% else %}
+                 <li class="page-item">
+                   <a href="?page={{i}}" class="page-link">{{i}}</a>
+                 </li>
+               {% endif %}
+              {% endfor %} 
+              {% if blog.has_next %}
+                  <li class="page-item">
+                    <a href="?page={{blog.next_page_number}}" class="page-link">&raquo;
+                    </a>
+                  </li>
+                {% else %}
+                  <!-- <li class="page-link disabled">
+                    <a class="page-link">&raquo;</a>
+                  </li> -->
+              {% endif %}
+            </ul>                   
+              {% endif %}
+          </div>
+      </div> 
+    </div>
+</section>
+
+{% endblock content %}

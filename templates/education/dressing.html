@@ -1,0 +1,227 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+Dressing
+{% endblock title %}
+
+{% block content %}
+<div class="inner-banner">
+    <section class="w3l-breadcrumb text-left">
+      <div class="container">
+        <ul class="breadcrumbs-custom-path">
+          <li><a  href="{% url 'index' %}">Home</a></li>
+          <li class="active"><span class="fa fa-chevron-right mx-2" aria-hidden="true"></span>Dressing</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <section style="margin-top: -6rem !important;"  class="about-section py-5">
+    <div class="container py-md-5 py-4">
+        
+        
+        <div class="row mt-sm-5 mt-4">
+            {% if dressing %}
+            {% for item in dressing %}
+               <div class="col-lg-12 mt-lg-0 mt-4 text-center">
+                    <h3 class="title-style mb-4">{{ item.title}}</h3>
+                    <p>{{item.body | safe}}</p>
+                </div>     
+            {% endfor %}
+             {% endif %}  
+
+        </div>
+        
+    </div>
+</section>
+
+  <!-- <div class="container mt-5 mb-5">
+    <div class="row">
+      <div class="col-md-12">
+        <p class=" text-center mb-2 mt-3">It is expected of all students to put on the right uniform for each day. The guideline for uniforms and days to be worn are stated below:</p>
+        <h3 class="text-center mb-4 mt-4">Uniform</h3>
+        <table class="table table-striped text-center">
+          <tbody style="color: var(--heading-color)">
+                <tr>
+                  <td>Monday</td>
+                  <td>Cream/Green	</td>
+                  <td>School Uniform</td>
+              </tr>
+                <tr>
+                  <td>Tuesday</td>
+                  <td>Cream/Green	</td>
+                  <td>School Uniform</td>
+              </tr>
+                <tr>
+                  <td>Wednesday</td>
+                  <td>Sportswear</td>
+                  <td>Sportswear</td>
+              </tr>
+                <tr>
+                  <td>Thursday</td>
+                  <td>Cream/Green	</td>
+                  <td>School Uniform</td>
+              </tr>
+                <tr>
+                  <td>Friday</td>
+                  <td>Cream/Green</td>
+                  <td>Friday Wear</td>
+              </tr>
+          </tbody>
+      </table> 
+
+        <h3 class="text-center mb-4 mt-4">Hijab for Girls</h3>
+        <table class="table table-striped text-center">
+          <thead style="color: var(--heading-color)">
+          <tbody style="color: var(--heading-color)">
+            <tr>
+              <td></td>
+              <td><h5>Junior</h5></td>
+              <td><h5>Senior</h5></td>
+          </tr>
+                <tr>
+                  <td><h6>Monday</h6></td>
+                  <td>Cream Hijab	</td>
+                  <td>Black Hijab</td>
+              </tr>
+                <tr>
+                  <td><h6>Tuesday</h6></td>
+                  <td>Cream Hijab	</td>
+                  <td>Black Hijab</td>
+              </tr>
+                <tr>
+                  <td><h6>Wednesday</h6></td>
+                  <td>White Hijab</td>
+                  <td>White Hijab</td>
+              </tr>
+                <tr>
+                  <td><h6>Thursday</h6></td>
+                  <td>Cream Hijab	</td>
+                  <td>White Hijab</td>
+              </tr>
+                <tr>
+                  <td><h6>Friday</h6></td>
+                  <td>Black Hijab</td>
+                  <td>Black Hijab</td>
+              </tr>
+          </tbody>
+      </table>  
+
+      <h3 class="text-center mb-4 mt-4">Socks for Girls</h3>
+        <table class="table table-striped text-center">
+          <thead style="color: var(--heading-color)">
+          <tbody style="color: var(--heading-color)">
+            <tr>
+              <td></td>
+              <td><h5>Junior</h5></td>
+              <td><h5>Senior</h5></td>
+          </tr>
+                <tr>
+                  <td><h6>Monday</h6></td>
+                  <td>White Socks	</td>
+                  <td>Black Pantyholes
+                  </td>
+              </tr>
+                <tr>
+                  <td><h6>Tuesday</h6></td>
+                  <td>White Socks	</td>
+                  <td>Black Pantyholes
+                  </td>
+              </tr>
+                <tr>
+                  <td><h6>Wednesday</h6></td>
+                  <td>White Socks	</td>
+                  <td>White Socks</td>
+              </tr>
+                <tr>
+                  <td><h6>Thursday</h6></td>
+                  <td>White Socks	</td>
+                  <td>Black Pantyholes</td>
+              </tr>
+                <tr>
+                  <td><h6>Friday</h6></td>
+                  <td>No Socks</td>
+                  <td>No Socks</td>
+              </tr>
+          </tbody>
+      </table>  
+
+      <h3 class="text-center mb-4 mt-4">Socks for Boys</h3>
+        <table class="table table-striped text-center">
+          <tbody style="color: var(--heading-color)">
+                <tr>
+                  <td></td>
+                  <td><h5>Junior</h5></td>
+                  <td><h5>Senior</h5></td>
+              </tr>
+                <tr>
+                  <td><h6>Monday</h6></td>
+                  <td>White Socks</td>
+                  <td>Black Socks</td>
+              </tr>
+                <tr>
+                  <td><h6>Tuesday</h6></td>
+                  <td>White Socks</td>
+                  <td>Black Socks</td>
+              </tr>
+                <tr>
+                  <td><h6>Wednesday</h6></td>
+                  <td>White Socks</td>
+                  <td>White Socks</td>
+              </tr>
+                <tr>
+                  <td><h6>Thursday</h6></td>
+                  <td>White Socks</td>
+                  <td>Black Socks</td>
+              </tr>
+                <tr>
+                  <td><h6>Friday</h6></td>
+                  <td>No Socks</td>
+                  <td>No Socks</td>
+              </tr>
+          </tbody>
+      </table> 
+<ul >
+  <li>Shoes <span class="fa fa-angle-double-right mr-2"></span>Only black leather shoes are allowed. Patent and suede shoes are not acceptable.</li>
+  <li>Socks <span class="fa fa-angle-double-right mr-2"></span>Black and white socks which come up to the middle of the leg. Ankle socks are not allowed.</li>
+  <li>Sports Shoes <span class="fa fa-angle-double-right mr-2"></span>Sports Shoes > White canvass with black socks is not allowed. All students must appear in white canvass and white socks as black socks is not allowed.</li>
+  <li>Sports Wear <span class="fa fa-angle-double-right mr-2"></span>Learners are to dress in their school house sport wear on Wednesdays. Mufti is not allowed.</li>
+  <li>Ties <span class="fa fa-angle-double-right mr-2"></span>For boys.</li>
+</ul>
+
+<h3 class=" mb-2 mt-5">Hairstyles:</h3>
+<ul >
+  <li>Boys <span class="fa fa-angle-double-right mr-2"></span>Acceptable hairstyle for boys should be low-cut.</li>
+  <li>Girls <span class="fa fa-angle-double-right mr-2"></span>Hairstyle will be announced fortnightly.</li>
+</ul>
+
+      <h3 class="text-center mb-2 mt-5">Prohibition and Discipline</h3>
+      <p class="mb-2 mt-3">The under listed are prohibited in the School:</p>
+      <ul >
+        <li><span class="fa fa-angle-double-right mr-2"></span>Wearing of earrings/piercing of earlobes by male learners.</li>
+        <li><span class="fa fa-angle-double-right mr-2"></span>Wearing of nose rings.</li>
+        <li><span class="fa fa-angle-double-right mr-2"></span>Wearing of bracelets or anklets.</li>
+        <li><span class="fa fa-angle-double-right mr-2"></span>Use of mobile cell phones during school hours.</li>
+        <li><span class="fa fa-angle-double-right mr-2"></span>Possession of micro and macro computer games.</li>
+        <li><span class="fa fa-angle-double-right mr-2"></span>Use of Discman, Walkman, Mp3, etc.</li>
+        <li><span class="fa fa-angle-double-right mr-2"></span>Wearing of bushy hair, side burns is not allowed.</li>
+        <li><span class="fa fa-angle-double-right mr-2"></span>Wearing of wristwatches with bracelets.</li>
+        <li><span class="fa fa-angle-double-right mr-2"></span>Wearing of coloured items under the school uniform is not allowed.</li>
+    </ul>
+      <hr>
+      <p class="mb-2">In addition to the above:</p>
+      <ul >
+        <li><span class="fa fa-angle-double-right mr-2"></span>Rolling up of school uniform sleeves is prohibited.</li>
+        <li><span class="fa fa-angle-double-right mr-2"></span>Wearing of ankle socks is not allowed.</li>
+        <li><span class="fa fa-angle-double-right mr-2"></span>Walking around with bare feet along the corridors/hallways is not acceptable.</li>
+        <li><span class="fa fa-angle-double-right mr-2"></span>Tying of cardigans or sweater around the waist is prohibited.</li>
+        <li><span class="fa fa-angle-double-right mr-2"></span>Girls must adhere strictly to the hairstyle given to them every fortnight.</li>
+    </ul>
+      <p>NOTE: Failure to abide by the above mode of dressing will attract severe punishment.</p>
+
+      </div>
+    </div>
+  </div>
+   -->
+
+{% endblock content %}
